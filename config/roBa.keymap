@@ -120,10 +120,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                           &trans  &trans    &kp LG(D)                 &trans                    &trans
-&trans  &trans  &trans  &trans  &trans                  &trans                           &trans  &trans  &mkp MB1  &lt_to_layer_0 5 LC(TAB)  &mkp MB2                  &kp LG(D)
-&trans  &trans  &trans  &trans  &trans                  &trans                           &trans  &trans  &mkp MB4  &mkp MB1                  &lt_to_layer_0 5 LC(TAB)  &mkp MB5
-&trans  &trans  &trans  &trans  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 3 LANGUAGE_1      &trans  &to 0                                                                 &mkp MB3
+&trans     &trans  &trans  &trans  &trans                                                           &trans  &trans    &kp LG(D)                 &trans                    &trans
+&kp A      &trans  &trans  &trans  &trans                  &trans                           &trans  &trans  &mkp MB1  &lt_to_layer_0 5 LC(TAB)  &mkp MB2                  &kp LG(D)
+&kp Z      &kp X   &kp C   &kp V   &trans                  &trans                           &trans  &trans  &mkp MB4  &mkp MB1                  &lt_to_layer_0 5 LC(TAB)  &mkp MB5
+&kp LCTRL  &trans  &trans  &trans  &lt_to_layer_0 2 SPACE  &lt_to_layer_0 3 LANGUAGE_1      &trans  &to 0                                                                 &mkp MB3
             >;
 
             sensor-bindings = <&inc_dec_kp LC(MINUS) LS(LC(EQUAL))>;
