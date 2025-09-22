@@ -82,7 +82,7 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                   &kp T                                                         &kp Y      &kp U  &kp I      &kp O                    &kp P
 &kp A             &kp S         &kp D         &kp F                   &kp G        &kp LG(ESC)                 &kp SQT              &kp H      &kp J  &kp K      &kp L                    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &kp ESCAPE                  &lt_to_layer_0 6 AT  &kp N      &kp M  &kp COMMA  &lt_to_layer_0 5 PERIOD  &mt RIGHT_SHIFT SLASH
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &trans                      &lt_to_layer_0 6 AT  &kp N      &kp M  &kp COMMA  &lt_to_layer_0 5 PERIOD  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 1 LANG2  &lt 2 SPACE  &lt_to_layer_0 3 LANG1      &kp BACKSPACE        &kp ENTER                                             &kp DEL
             >;
 
