@@ -91,7 +91,7 @@
 
         kigou {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2                &kp F3                 &kp F4  &kp F5
+&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp EXCLAMATION       &kp F3                 &kp F4  &kp F5
 &trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp F9  &kp F10
 &trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans                &trans                 &trans  &kp F11
 &trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                                                       &kp F12
