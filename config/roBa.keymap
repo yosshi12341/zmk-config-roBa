@@ -40,7 +40,7 @@
         };
 
         muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
+            bindings = <&to_layer_0 ESCAPE>;
             key-positions = <11 10>;
         };
 
