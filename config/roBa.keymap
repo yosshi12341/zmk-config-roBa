@@ -91,10 +91,10 @@
 
         kigou {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp EXCLAMATION       &kp F3                 &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans                &trans                 &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                                                       &kp F12
+&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp EXCLAMATION       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp INT_YEN
+&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp F10
+&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans                &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION
+&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                                                                     &kp F12
             >;
         };
 
