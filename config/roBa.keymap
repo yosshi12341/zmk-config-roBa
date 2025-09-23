@@ -138,7 +138,7 @@
 &kp LCTRL         &trans  &trans  &trans  &sl 2   &to 3       &trans  &to 0                                                                 &kp DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(MINUS) LS(LC(EQUAL))>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         SCROLL {
