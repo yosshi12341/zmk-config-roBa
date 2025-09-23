@@ -64,47 +64,6 @@
         };
     };
 
-    
-
-
-    behaviors {
-        // 押している間はレイヤー2、離したらレイヤー0へ戻す
-        hold_layer2: behavior_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TO_LAYER2";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "hold-preferred";
-            bindings = <&to 2>, <&to 0>;
-        };
-    };
-
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            bindings = <
-                &hold_layer2   // このキーを押すと2、離すと0
-            >;
-        };
-
-        layer2 {
-            bindings = <
-                // レイヤー2の内容
-            >;
-        };
-
-        layer4 {
-            bindings = <
-                &hold_layer2   // ここにも割り当て可
-            >;
-        };
-    };
-
-
-
-
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
