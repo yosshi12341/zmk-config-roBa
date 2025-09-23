@@ -72,6 +72,10 @@
             tap-ms = <20>;
         };
     };
+/* ここが追加・変更箇所 */
+&encoder0 {
+    sensor-bindings = <&scroll_up_down>;
+};
 
 / {
     behaviors {
@@ -110,10 +114,6 @@
     };
 };
 
-/* ここが追加・変更箇所 */
-&encoder0 {
-    sensor-bindings = <&scroll_up_down>;
-};
 
 
     behaviors {
