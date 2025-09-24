@@ -86,7 +86,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 1 LANG2  &lt 2 SPACE  &lt_to_layer_0 3 LANG1      &kp BACKSPACE        &kp ENTER                                             &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp K_VOLUME_DOWN K_VOLUME_UP>;
         };
 
         kigou {
@@ -120,10 +120,10 @@
 
         MOUSE {
             bindings = <
-&trans            &trans  &trans  &trans  &trans                                                                &trans  &trans    &kp LG(D)                 &kp LG(TAB)               &trans
-&kp A             &trans  &trans  &trans  &trans                       &trans                           &trans  &trans  &mkp MB1  &lt_to_layer_0 5 LC(TAB)  &mkp MB2                  &kp LG(D)
-&mt LEFT_SHIFT Z  &kp X   &kp C   &kp V   &trans                       &trans                           &trans  &trans  &mkp MB4  &mkp MB1                  &lt_to_layer_0 5 LC(TAB)  &mkp MB5
-&kp LCTRL         &trans  &trans  &trans  &lt_to_layer_0 2 LANGUAGE_1  &lt_to_layer_0 3 LANGUAGE_1      &trans  &to 0                                                                 &kp DELETE
+&trans            &trans  &trans  &trans  &trans                                                                &trans  &trans    &kp LG(D)                 &kp LG(TAB)  &trans
+&kp A             &trans  &trans  &trans  &trans                       &trans                           &trans  &trans  &mkp MB1  &lt_to_layer_0 5 LC(TAB)  &mkp MB2     &kp LG(D)
+&mt LEFT_SHIFT Z  &kp X   &kp C   &kp V   &trans                       &trans                           &trans  &trans  &mkp MB4  &kp LC(C)                 &kp LC(V)    &kp LS(LC(V))
+&kp LCTRL         &trans  &trans  &trans  &lt_to_layer_0 2 LANGUAGE_1  &lt_to_layer_0 3 LANGUAGE_1      &trans  &to 0                                                    &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp K_VOLUME_DOWN K_VOLUME_UP>;
