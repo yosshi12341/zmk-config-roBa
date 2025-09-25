@@ -73,7 +73,23 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+    
+    hold_layer_3_to_0: hold_layer_3_to_0 {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOLD_LAYER_3_TO_0";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        bindings = <&to layer_1>, <&to_layer_0>;
     };
+
+    hold_layer_2_to_0: hold_layer_2_to_0 {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOLD_LAYER_2_TO_0";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        bindings = <&to layer_2>, <&to_layer_0>;
+    };
+};
 
     keymap {
         compatible = "zmk,keymap";
