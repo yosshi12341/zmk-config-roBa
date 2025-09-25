@@ -139,7 +139,7 @@
 &trans            &trans  &trans  &trans  &trans                                                                        &trans  &trans    &kp LG(D)                 &kp LG(TAB)  &trans
 &kp A             &trans  &trans  &trans  &trans                           &kp C_MUTE                           &trans  &trans  &mkp MB1  &lt_to_layer_0 5 LC(TAB)  &mkp MB2     &kp LG(D)
 &mt LEFT_SHIFT Z  &kp X   &kp C   &kp V   &trans                           &trans                               &trans  &trans  &mkp MB4  &kp LC(C)                 &kp LC(V)    &kp LS(LC(V))
-&kp LCTRL         &trans  &trans  &trans  &hold_layer_2_to_0 2 LANGUAGE_1  &hold_layer_3_to_0 3 LANGUAGE_1      &trans  &to 0                                                    &kp DELETE
+&kp LCTRL         &trans  &trans  &trans  &hold_layer_2_to_0   &hold_layer_3_to_0      &trans  &to 0                                                    &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
