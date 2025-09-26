@@ -62,23 +62,22 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
-   
-mkp_exit_AML: mkp_exit_AML {
-    compatible = "zmk,behavior-macro-one-param";
-    #binding-cells = <1>;
-    bindings =
-        <&macro_press>,
-        <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
-        <&macro_pause_for_release>,
-        <&macro_release>,
-        <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
-        <&macro_tap>,
-        <&sl 4>;
-    label = "MKP_EXIT_AML";
-};
 
+        mkp_exit_AML: mkp_exit_AML {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&sl 4>;
 
-};
+            label = "MKP_EXIT_AML";
+        };
+    };
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
@@ -147,10 +146,10 @@ mkp_exit_AML: mkp_exit_AML {
 
         MOUSE {
             bindings = <
-&trans            &trans  &trans  &trans  &trans                                                                &trans  &trans    &kp LG(D)      &kp LG(TAB)  &trans
-&kp A             &trans  &trans  &trans  &trans                       &kp C_MUTE                       &trans  &trans  &mkp MB1  &lt 5 LC(TAB)  &mkp MB2     &kp LG(D)
-&mt LEFT_SHIFT Z  &kp X   &kp C   &kp V   &trans                       &trans                           &trans  &trans  &mkp MB4  &kp LC(C)      &kp LC(V)    &kp LS(LC(V))
-&kp LCTRL         &trans  &trans  &trans  &lt_to_layer_0 2 LANGUAGE_1  &lt_to_layer_0 3 LANGUAGE_2      &trans  &to 0                                         &kp DELETE
+&trans            &trans  &trans  &trans  &trans                                                                &trans    &trans             &kp LG(D)      &kp LG(TAB)  &kp LG(LS(S))
+&kp A             &trans  &trans  &trans  &trans                       &kp C_MUTE                       &trans  &mkp MB1  &mkp_exit_AML MB1  &lt 5 LC(TAB)  &mkp MB2     &kp LS(A)
+&mt LEFT_SHIFT Z  &kp X   &kp C   &kp V   &trans                       &trans                           &trans  &trans    &mkp MB4           &kp LC(C)      &kp LC(V)    &kp LS(LC(V))
+&kp LCTRL         &trans  &trans  &trans  &lt_to_layer_0 2 LANGUAGE_1  &lt_to_layer_0 3 LANGUAGE_2      &trans  &to 0                                                    &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
