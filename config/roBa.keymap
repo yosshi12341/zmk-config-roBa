@@ -117,10 +117,10 @@
 
         kigou {
             bindings = <
-&trans          &trans  &trans  &trans  &trans                                  &kp AMPERSAND      &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT
-&trans          &trans  &trans  &trans  &trans  &kp INT_YEN      &kp COLON      &kp DOUBLE_QUOTES  &kp DOLLAR       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT
-&kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &kp HASH         &kp SEMICOLON  &kp LEFT_BRACE     &kp RIGHT_BRACE  &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION
-&trans          &trans  &trans  &trans  &trans  &trans           &trans         &trans                                                                           &kp HASH
+&trans          &trans  &trans  &trans  &trans                                       &kp AMPERSAND      &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT
+&trans          &trans  &trans  &trans  &trans       &kp INT_YEN      &kp COLON      &kp DOUBLE_QUOTES  &kp DOLLAR       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT
+&kp LEFT_SHIFT  &trans  &trans  &trans  &kp INT_YEN  &kp HASH         &kp SEMICOLON  &kp LEFT_BRACE     &kp RIGHT_BRACE  &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION
+&trans          &trans  &trans  &trans  &trans       &trans           &trans         &trans                                                                           &kp HASH
             >;
         };
 
