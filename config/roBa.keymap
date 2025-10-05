@@ -119,17 +119,17 @@
             bindings = <
 &trans          &trans  &trans  &trans  &trans                                       &kp AMPERSAND      &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT
 &trans          &trans  &trans  &trans  &trans       &kp INT_YEN      &kp COLON      &kp DOUBLE_QUOTES  &kp DOLLAR       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT
-&kp LEFT_SHIFT  &trans  &trans  &trans  &kp INT_YEN  &kp HASH         &kp SEMICOLON  &kp LEFT_BRACE     &kp RIGHT_BRACE  &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION
+&kp LEFT_SHIFT  &trans  &trans  &trans  &kp INT_YEN  &kp EQUAL        &kp SEMICOLON  &kp LEFT_BRACE     &kp RIGHT_BRACE  &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION
 &trans          &trans  &trans  &trans  &trans       &trans           &trans         &trans                                                                           &kp HASH
             >;
         };
 
         NUM {
             bindings = <
-&kp MINUS       &kp KP_NUMBER_7  &kp UP_ARROW  &kp KP_NUMBER_9  &kp PLUS                                                &kp KP_MULTIPLY  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS
-&kp HOME        &kp LEFT         &kp DOWN      &kp RIGHT        &kp END     &kp LC(LA(KP_NUMBER_0))      &kp EQUAL      &kp KP_SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
-&kp LEFT_SHIFT  &kp KP_NUMBER_1  &kp TAB       &kp KP_NUMBER_3  &kp PERIOD  &kp EQUAL                    &kp TAB        &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp ENTER
-&trans          &trans           &trans        &kp LANGUAGE_2   &kp SPACE   &to 0                        &kp BACKSPACE  &kp KP_NUMBER_0                                                     &kp DEL
+&kp MINUS       &kp PG_UP      &kp UP_ARROW  &kp KP_NUMBER_9  &kp PLUS                                                &kp KP_MULTIPLY  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS
+&kp HOME        &kp LEFT       &kp DOWN      &kp RIGHT        &kp END     &kp LC(LA(KP_NUMBER_0))      &kp EQUAL      &kp KP_SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
+&kp LEFT_SHIFT  &kp PAGE_DOWN  &kp TAB       &kp KP_NUMBER_3  &kp PERIOD  &kp EQUAL                    &kp TAB        &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp ENTER
+&trans          &trans         &trans        &kp LANGUAGE_2   &kp SPACE   &to 0                        &kp BACKSPACE  &kp KP_NUMBER_0                                                     &kp DEL
             >;
         };
 
