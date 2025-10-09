@@ -126,10 +126,10 @@
 
         NUM {
             bindings = <
-&kp MINUS  &kp PG_UP      &kp UP_ARROW  &kp KP_NUMBER_9  &kp PLUS                                                &kp KP_MULTIPLY  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS
-&kp HOME   &kp LEFT       &kp DOWN      &kp RIGHT        &kp END     &kp LC(LA(KP_NUMBER_0))      &kp EQUAL      &kp KP_SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
-&trans     &kp PAGE_DOWN  &kp TAB       &kp KP_NUMBER_3  &kp PERIOD  &kp EQUAL                    &kp TAB        &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp ENTER
-&trans     &trans         &trans        &trans           &trans      &to 0                        &kp BACKSPACE  &kp KP_NUMBER_0                                                     &kp DEL
+&kp MINUS  &kp PG_UP      &kp UP_ARROW  &kp KP_NUMBER_9  &kp PLUS                                            &kp KP_MULTIPLY  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS
+&kp HOME   &kp LEFT       &kp DOWN      &kp RIGHT        &kp END     &kp LC(LA(KP_NUMBER_0))      &kp EQUAL  &kp KP_SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
+&trans     &kp PAGE_DOWN  &kp TAB       &kp KP_NUMBER_3  &kp PERIOD  &kp EQUAL                    &kp TAB    &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp ENTER
+&trans     &trans         &trans        &trans           &trans      &to 0                        &trans     &kp KP_NUMBER_0                                                     &kp DEL
             >;
         };
 
