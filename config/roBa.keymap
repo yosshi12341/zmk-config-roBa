@@ -146,10 +146,10 @@
 
         MOUSE {
             bindings = <
-&trans            &trans  &trans  &trans  &trans                                           &kp LG(LS(S))      &kp PAGE_UP  &kp LG(D)      &kp LG(TAB)  &kp LS(LC(RIGHT))
-&kp A             &trans  &trans  &trans  &trans  &kp C_MUTE                       &to 3   &mkp_exit_AML MB1  &mkp MB1     &lt 5 LC(TAB)  &mkp MB2     &kp LS(LC(DOWN_ARROW))
-&mt LEFT_SHIFT Z  &kp X   &kp C   &kp V   &trans  &trans                           &to 2   &kp F4             &mkp MB4     &kp LC(C)      &kp LC(V)    &kp LS(LC(V))
-&kp LCTRL         &trans  &trans  &trans  &to 2   &lt_to_layer_0 3 LANGUAGE_2      &trans  &to 0                                                       &kp DELETE
+&to_layer_0 Q  &to_layer_0 W  &to_layer_0 E  &to_layer_0 R           &to_layer_0 T                                 &kp LG(LS(S))      &kp PAGE_UP  &kp LG(D)      &kp LG(TAB)  &kp LS(LC(RIGHT))
+&to_layer_0 A  &to_layer_0 S  &to_layer_0 D  &to_layer_0 F           &to_layer_0 G  &kp C_MUTE             &to 3   &mkp_exit_AML MB1  &mkp MB1     &lt 5 LC(TAB)  &mkp MB2     &kp LS(LC(DOWN_ARROW))
+&to_layer_0 Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V           &to_layer_0 B  &trans                 &to 2   &kp F4             &mkp MB4     &kp LC(C)      &kp LC(V)    &kp LS(LC(V))
+&kp LCTRL      &trans         &trans         &to_layer_0 LANGUAGE_2  &to 2          &to_layer_0 LANG1      &trans  &to 0                                                       &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
