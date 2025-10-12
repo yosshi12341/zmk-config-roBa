@@ -89,15 +89,11 @@
             tapping-term-ms = <200>;
         };
 
-        holdX_return0: holdX_return0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLDX_RETURN0";
-            #binding-cells = <2>;          // 引数でレイヤー番号を指定できる
-            tapping-term-ms = <200>;
-
-            // 押している間は指定レイヤー、離したらレイヤー0に戻る
-
-            bindings = <&mo>, <&to_layer_0>;
+       hold_layer_to_0: hold_layer_to_0 {
+            compatible = "zmk,behavior-macro-one-param";
+            label = "HOLD_LAYER_TO_0";
+            #binding-cells = <1>;
+            bindings = <&macro_press &mo &macro_param_1to1>, <&macro_release &to 0>;
         };
     };
 
