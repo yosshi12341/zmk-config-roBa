@@ -89,15 +89,15 @@
             tapping-term-ms = <200>;
         };
 
-        hold_layer_to_0: hold_layer_to_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            label = "HOLD_LAYER_TO_0";
+       hold_to_layer_then_to0: hold_to_layer_then_to0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TO_LAYER_THEN_TO0";
             #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&mo &macro_param_1to1>,
-                <&macro_release>,
-                <&to MACRO_PLACEHOLDER>;
+            tapping-term-ms = <200>;
+
+            // ホールド時：指定レイヤーを押してる間だけ有効化
+            // タップ時：デフォルトレイヤー（0）に戻す
+            bindings = <&mo>, <&to 0>;
         };
     };
 
