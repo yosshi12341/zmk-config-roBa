@@ -89,16 +89,7 @@
             tapping-term-ms = <200>;
         };
 
-       hold_to_layer_then_to0: hold_to_layer_then_to0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TO_LAYER_THEN_TO0";
-            #binding-cells = <1>;
-            tapping-term-ms = <200>;
-
-            // ホールド時：指定レイヤーを押してる間だけ有効化
-            // タップ時：デフォルトレイヤー（0）に戻す
-            bindings = <&mo>, <&to 0>;
-        };
+      
     };
 
     keymap {
