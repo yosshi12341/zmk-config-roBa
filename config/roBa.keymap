@@ -39,8 +39,9 @@
             key-positions = <12 13>;
         };
 
+        // 修正: マクロ引数を <&kp ...> で囲みました
         muhennkann {
-            bindings = <&to_layer_0 ESCAPE>;
+            bindings = <&to_layer_0 <&kp ESCAPE>>;
             key-positions = <11 10>;
         };
 
@@ -77,6 +78,22 @@
 
             label = "MKP_EXIT_AML";
         };
+
+        // 👇 追加されたマクロ1: ホールドでレイヤー2、リリースでレイヤー0へ
+        LAYER_SWAP_TO_2_AND_0: layer_swap_to_2_and_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 2>;
+            release = <&to 0>;
+        };
+
+        // 👇 追加されたマクロ2: ホールドでレイヤー3、リリースでレイヤー0へ
+        LAYER_SWAP_TO_3_AND_0: layer_swap_to_3_and_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 3>;
+            release = <&to 0>;
+        };
     };
 
     behaviors {
@@ -97,8 +114,8 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R        &kp T                                            &kp Y      &kp U  &kp I      &kp O       &kp P
 &kp A             &kp S         &kp D         &kp F        &kp G        &kp C_MUTE       &kp ESCAPE         &kp H      &kp J  &kp K      &kp L       &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B        &kp AT_SIGN      &lt 6 EXCLAMATION  &kp N      &kp M  &kp COMMA  &kp PERIOD  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 LANG2  &lt 2 SPACE  &lt 3 LANG1      &kp BACKSPACE      &kp ENTER                                &mt RIGHT_ALT DELETE
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B        &kp AT_SIGN      &lt 6 <&kp EXCLAMATION>  &kp N      &kp M  &kp COMMA  &kp PERIOD  &mt RIGHT_SHIFT SLASH // 修正: &lt 6 EXCLAMATION -> <&kp EXCLAMATION>
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 <&kp LANG2>  &lt 2 <&kp SPACE>  &lt 3 <&kp LANG1>      &kp BACKSPACE      &kp ENTER                                &mt RIGHT_ALT DELETE // 修正: &lt 引数を <&kp ...> に
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -133,18 +150,18 @@
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        MOUSE {
+        MOUSE { // レイヤー4
             bindings = <
-&to_layer_0 Q     &to_layer_0 W  &to_layer_0 E  &to_layer_0 R           &to_layer_0 T                          &kp LG(LS(S))  &kp LC(UP_ARROW)  &kp LG(D)      &kp LG(TAB)  &kp LS(LC(RIGHT))
-&to_layer_0 A     &to_layer_0 S  &to_layer_0 D  &to_layer_0 F           &to_layer_0 G  &kp C_MUTE      &to 3   &kp LC(LEFT)   &mkp MB1          &lt 5 LC(TAB)  &mkp MB2     &kp LS(LC(DOWN_ARROW))
-&mt LEFT_SHIFT Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V           &to_layer_0 B  &trans          &to 2   &kp F4         &mkp MB4          &kp LC(C)      &kp LC(V)    &kp LS(LC(V))
-&trans            &trans         &trans         &to_layer_0 LANGUAGE_2  &trans         &trans          &trans  &to 0                                                        &kp DELETE
+&to_layer_0 <&kp Q>     &to_layer_0 <&kp W>  &to_layer_0 <&kp E>  &to_layer_0 <&kp R>           &to_layer_0 <&kp T>                          &kp LG(LS(S))  &kp LC(UP_ARROW)  &kp LG(D)      &kp LG(TAB)  &kp LS(LC(RIGHT))> // 修正: <&kp ...> を追加
+&to_layer_0 <&kp A>     &to_layer_0 <&kp S>  &to_layer_0 <&kp D>  &to_layer_0 <&kp F>           &to_layer_0 <&kp G>  &kp C_MUTE      &to 3   &kp LC(LEFT)   &mkp MB1          &lt 5 <&kp LC(TAB)>  &mkp MB2     &kp LS(LC(DOWN_ARROW))> // 修正: <&kp ...> を追加
+&mt LEFT_SHIFT Z        &to_layer_0 <&kp X>  &to_layer_0 <&kp C>  &to_layer_0 <&kp V>           &to_layer_0 <&kp B>  &trans          &to 2   &kp F4         &mkp MB4          &kp LC(C)      &kp LC(V)    &kp LS(LC(V))> // 修正: <&kp ...> を追加
+&trans                  &trans               &trans               &to_layer_0 <&kp LANG2>       &LAYER_SWAP_TO_2_AND_0 &LAYER_SWAP_TO_3_AND_0 &trans  &to 0                                                        &kp DELETE // 修正とマクロ割当
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
-        SCROLL {
+        SCROLL { // レイヤー5
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
