@@ -78,32 +78,34 @@
             label = "MKP_EXIT_AML";
         };
 
-
-　　　// LAYER_SWAP_TO_3_AND_0 という名前のマクロを定義
+        　　　// LAYER_SWAP_TO_3_AND_0 という名前のマクロを定義
         LAYER_SWAP_TO_2_AND_0: layer_swap_to_2_and_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            
+
             // キーが押されたとき (press): レイヤー3へ移動 (To Layer 3)
-            bindings = <&to 2>; 
+
+            bindings = <&to 2>;
 
             // キーが離されたとき (release): レイヤー0へ移動 (To Layer 0)
+
             release = <&to 0>;
         };
 
-// LAYER_SWAP_TO_3_AND_0 という名前のマクロを定義
+        // LAYER_SWAP_TO_3_AND_0 という名前のマクロを定義
+
         LAYER_SWAP_TO_3_AND_0: layer_swap_to_3_and_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            
+
             // キーが押されたとき (press): レイヤー3へ移動 (To Layer 3)
-            bindings = <&to 3>; 
+
+            bindings = <&to 3>;
 
             // キーが離されたとき (release): レイヤー0へ移動 (To Layer 0)
+
             release = <&to 0>;
         };
-
-
     };
 
     behaviors {
@@ -162,10 +164,10 @@
 
         MOUSE {
             bindings = <
-&to_layer_0 Q     &to_layer_0 W  &to_layer_0 E  &to_layer_0 R           &to_layer_0 T                          &kp LG(LS(S))  &kp LC(UP_ARROW)  &kp LG(D)      &kp LG(TAB)  &kp LS(LC(RIGHT))
-&to_layer_0 A     &to_layer_0 S  &to_layer_0 D  &to_layer_0 F           &to_layer_0 G  &kp C_MUTE      &to 3   &kp LC(LEFT)   &mkp MB1          &lt 5 LC(TAB)  &mkp MB2     &kp LS(LC(DOWN_ARROW))
-&mt LEFT_SHIFT Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V           &to_layer_0 B  &trans          &to 2   &kp F4         &mkp MB4          &kp LC(C)      &kp LC(V)    &kp LS(LC(V))
-&trans            &trans         &trans         &to_layer_0 LANGUAGE_2  &trans         &trans          &trans  &to 0                                                        &kp DELETE
+&to_layer_0 Q     &to_layer_0 W  &to_layer_0 E  &to_layer_0 R           &to_layer_0 T                                               &kp LG(LS(S))  &kp LC(UP_ARROW)  &kp LG(D)      &kp LG(TAB)  &kp LS(LC(RIGHT))
+&to_layer_0 A     &to_layer_0 S  &to_layer_0 D  &to_layer_0 F           &to_layer_0 G           &kp C_MUTE                  &to 3   &kp LC(LEFT)   &mkp MB1          &lt 5 LC(TAB)  &mkp MB2     &kp LS(LC(DOWN_ARROW))
+&mt LEFT_SHIFT Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V           &to_layer_0 B           &trans                      &to 2   &kp F4         &mkp MB4          &kp LC(C)      &kp LC(V)    &kp LS(LC(V))
+&trans            &trans         &trans         &to_layer_0 LANGUAGE_2  &LAYER_SWAP_TO_2_AND_0  &LAYER_SWAP_TO_3_AND_0      &trans  &to 0                                                        &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
