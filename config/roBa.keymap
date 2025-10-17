@@ -39,9 +39,9 @@
             key-positions = <12 13>;
         };
 
-        // 修正: マクロ引数を <&kp ...> で囲みました
+      
         muhennkann {
-            bindings = <&to_layer_0 <&kp ESCAPE>>;
+            bindings = <&to_layer_0 &kp ESCAPE>;
             key-positions = <11 10>;
         };
 
