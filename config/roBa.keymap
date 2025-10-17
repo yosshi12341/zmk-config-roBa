@@ -79,21 +79,7 @@
             label = "MKP_EXIT_AML";
         };
 
-        // 👇 追加されたマクロ1: ホールドでレイヤー2、リリースでレイヤー0へ
-        LAYER_SWAP_TO_2_AND_0: layer_swap_to_2_and_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 2>;
-            release = <&to 0>;
-        };
-
-        // 👇 追加されたマクロ2: ホールドでレイヤー3、リリースでレイヤー0へ
-        LAYER_SWAP_TO_3_AND_0: layer_swap_to_3_and_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 3>;
-            release = <&to 0>;
-        };
+   
     };
 
     behaviors {
@@ -155,7 +141,7 @@
 &to_layer_0 <&kp Q>     &to_layer_0 <&kp W>  &to_layer_0 <&kp E>  &to_layer_0 <&kp R>           &to_layer_0 <&kp T>                          &kp LG(LS(S))  &kp LC(UP_ARROW)  &kp LG(D)      &kp LG(TAB)  &kp LS(LC(RIGHT))> // 修正: <&kp ...> を追加
 &to_layer_0 <&kp A>     &to_layer_0 <&kp S>  &to_layer_0 <&kp D>  &to_layer_0 <&kp F>           &to_layer_0 <&kp G>  &kp C_MUTE      &to 3   &kp LC(LEFT)   &mkp MB1          &lt 5 <&kp LC(TAB)>  &mkp MB2     &kp LS(LC(DOWN_ARROW))> // 修正: <&kp ...> を追加
 &mt LEFT_SHIFT Z        &to_layer_0 <&kp X>  &to_layer_0 <&kp C>  &to_layer_0 <&kp V>           &to_layer_0 <&kp B>  &trans          &to 2   &kp F4         &mkp MB4          &kp LC(C)      &kp LC(V)    &kp LS(LC(V))> // 修正: <&kp ...> を追加
-&trans                  &trans               &trans               &to_layer_0 <&kp LANG2>       &LAYER_SWAP_TO_2_AND_0 &LAYER_SWAP_TO_3_AND_0 &trans  &to 0                                                        &kp DELETE // 修正とマクロ割当
+&trans                  &trans               &trans               &to_layer_0 <&kp LANG2>       &trans &trans &trans  &to 0                                                        &kp DELETE // 修正とマクロ割当
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
