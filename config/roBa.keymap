@@ -77,32 +77,22 @@
 
             label = "MKP_EXIT_AML";
         };
-
-        　　　// LAYER_SWAP_TO_3_AND_0 という名前のマクロを定義
+// LAYER_SWAP_TO_2_AND_0 の定義
         LAYER_SWAP_TO_2_AND_0: layer_swap_to_2_and_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
-            // キーが押されたとき (press): レイヤー3へ移動 (To Layer 3)
-
             bindings = <&to 2>;
-
-            // キーが離されたとき (release): レイヤー0へ移動 (To Layer 0)
 
             release = <&to 0>;
         };
-
-        // LAYER_SWAP_TO_3_AND_0 という名前のマクロを定義
-
+        
+        // LAYER_SWAP_TO_3_AND_0 の定義
         LAYER_SWAP_TO_3_AND_0: layer_swap_to_3_and_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
-            // キーが押されたとき (press): レイヤー3へ移動 (To Layer 3)
-
             bindings = <&to 3>;
-
-            // キーが離されたとき (release): レイヤー0へ移動 (To Layer 0)
 
             release = <&to 0>;
         };
