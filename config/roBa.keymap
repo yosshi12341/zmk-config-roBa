@@ -88,16 +88,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-  type_name_yoshi: behavior-macro-yoshi {
-            compatible = "zmk,behavior-macro";
-            label = "yoshitaka_okuhara_macro";
-            #binding-cells = <0>;
-            sequences = <
-                &kp Y &kp O &kp S &kp H &kp I &kp T &kp A &kp K &kp A
-                &kp _ 
-                &kp O &kp K &kp U &kp H &kp A &kp R &kp A
-            >;
-        };
+ 
 };
 
     keymap {
