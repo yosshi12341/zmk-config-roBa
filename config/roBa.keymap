@@ -83,7 +83,16 @@
             #binding-cells = <0>;
             bindings = <&kp Y &kp O &kp S &kp H &kp I &kp T &kp A &kp K &kp A &kp UNDERSCORE &kp O &kp K &kp U &kp H &kp A &kp R &kp A>;
         };
-    };
+MACRO_7081MACC: macro_7081macc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            
+            bindings = <
+                &kp N7 &kp N0 &kp N8 &kp N1
+                &kp M &kp A &kp C &kp C
+            >;
+        };
+};
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
