@@ -92,6 +92,15 @@ MACRO_7081MACC: macro_7081macc {
                 &kp M &kp A &kp C &kp C
             >;
         };
+MACRO_MACC7081: macro_macc7081 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            
+            bindings = <
+                &kp M &kp A &kp C &kp C
+                &kp N7 &kp N0 &kp N8 &kp N1
+            >;
+        };
 };
 
     behaviors {
