@@ -77,7 +77,82 @@
 
             label = "MKP_EXIT_AML";
         };
+ 
+        type_name_yoshi: type_name_yoshi {
+            compatible = "zmk,behavior-macro";
+            label = "TYPE_YOSHITAKA_OKUHARA";
+            #binding-cells = <0>;
+            bindings =
+                // --- IMEオフ（Alt + `） ---
+                <&macro_press>,
+                <&kp LA(GRAVE)>,
+                <&macro_release>,
+                <&macro_pause 100>,
+
+                // --- 文字列入力 ---
+                <&kp Y>, <&macro_pause 10>,
+                <&kp O>, <&macro_pause 10>,
+                <&kp S>, <&macro_pause 10>,
+                <&kp H>, <&macro_pause 10>,
+                <&kp I>, <&macro_pause 10>,
+                <&kp T>, <&macro_pause 10>,
+                <&kp A>, <&macro_pause 10>,
+                <&kp K>, <&macro_pause 10>,
+                <&kp A>, <&macro_pause 10>,
+                <&kp UNDER>, <&macro_pause 10>,
+                <&kp O>, <&macro_pause 10>,
+                <&kp K>, <&macro_pause 10>,
+                <&kp U>, <&macro_pause 10>,
+                <&kp H>, <&macro_pause 10>,
+                <&kp A>, <&macro_pause 10>,
+                <&kp R>, <&macro_pause 10>,
+                <&kp A>;
+        };
+
+ type_7081macc: type_7081macc {
+        compatible = "zmk,behavior-macro";
+        label = "TYPE_7081MACC";
+        #binding-cells = <0>;
+        bindings =
+            // --- IMEオフ（Alt + `） ---
+            <&macro_press>,
+            <&kp LA(GRAVE)>,
+            <&macro_release>,
+            <&macro_pause 100>,
+
+            // --- 文字列入力 ---
+            <&kp N7>, <&macro_pause 10>,
+            <&kp N0>, <&macro_pause 10>,
+            <&kp N8>, <&macro_pause 10>,
+            <&kp N1>, <&macro_pause 10>,
+            <&kp M>, <&macro_pause 10>,
+            <&kp A>, <&macro_pause 10>,
+            <&kp C>, <&macro_pause 10>,
+            <&kp C>;
     };
+
+  type_macc7081: type_macc7081 {
+        compatible = "zmk,behavior-macro";
+        label = "TYPE_MACC7081";
+        #binding-cells = <0>;
+        bindings =
+            // --- IMEオフ（Alt + `） ---
+            <&macro_press>,
+            <&kp LA(GRAVE)>,
+            <&macro_release>,
+            <&macro_pause 100>,
+
+            // --- 文字列入力 ---
+            <&kp M>, <&macro_pause 10>,
+            <&kp A>, <&macro_pause 10>,
+            <&kp C>, <&macro_pause 10>,
+            <&kp C>, <&macro_pause 10>,
+            <&kp N7>, <&macro_pause 10>,
+            <&kp N0>, <&macro_pause 10>,
+            <&kp N8>, <&macro_pause 10>,
+            <&kp N1>;
+    };
+};
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
