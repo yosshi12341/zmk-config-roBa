@@ -84,8 +84,8 @@ YOSHITAKA_OKUHARA: yoshitaka_okuhara {
             bindings = <
                 &kp Y &kp O &kp S &kp H &kp I &kp T &kp A &kp K &kp A
                 
-                // アンダーバー '_' の入力
-                &mod(LSFT, MINUS)
+                // アンダースコア '_' の入力
+                &kp UNDERSCORE
                 
                 &kp O &kp K &kp U &kp H &kp A &kp R &kp A
             >;
