@@ -77,82 +77,40 @@
 
             label = "MKP_EXIT_AML";
         };
- 
+
         type_name_yoshi: type_name_yoshi {
             compatible = "zmk,behavior-macro";
             label = "TYPE_YOSHITAKA_OKUHARA";
             #binding-cells = <0>;
             bindings =
-                // --- IMEオフ（Alt + `） ---
                 <&macro_press>,
                 <&kp LA(GRAVE)>,
                 <&macro_release>,
-                <&macro_pause 100>,
-
-                // --- 文字列入力 ---
-                <&kp Y>, <&macro_pause 10>,
-                <&kp O>, <&macro_pause 10>,
-                <&kp S>, <&macro_pause 10>,
-                <&kp H>, <&macro_pause 10>,
-                <&kp I>, <&macro_pause 10>,
-                <&kp T>, <&macro_pause 10>,
-                <&kp A>, <&macro_pause 10>,
-                <&kp K>, <&macro_pause 10>,
-                <&kp A>, <&macro_pause 10>,
-                <&kp UNDER>, <&macro_pause 10>,
-                <&kp O>, <&macro_pause 10>,
-                <&kp K>, <&macro_pause 10>,
-                <&kp U>, <&macro_pause 10>,
-                <&kp H>, <&macro_pause 10>,
-                <&kp A>, <&macro_pause 10>,
-                <&kp R>, <&macro_pause 10>,
-                <&kp A>;
+                <&macro_pause 100 &kp Y &macro_pause 10 &kp O &macro_pause 10 &kp S &macro_pause 10 &kp H &macro_pause 10 &kp I &macro_pause 10 &kp T &macro_pause 10 &kp A &macro_pause 10 &kp K &macro_pause 10 &kp A &macro_pause 10 &kp UNDER &macro_pause 10 &kp O &macro_pause 10 &kp K &macro_pause 10 &kp U &macro_pause 10 &kp H &macro_pause 10 &kp A &macro_pause 10 &kp R &macro_pause 10 &kp A>;
         };
 
- type_7081macc: type_7081macc {
-        compatible = "zmk,behavior-macro";
-        label = "TYPE_7081MACC";
-        #binding-cells = <0>;
-        bindings =
-            // --- IMEオフ（Alt + `） ---
-            <&macro_press>,
-            <&kp LA(GRAVE)>,
-            <&macro_release>,
-            <&macro_pause 100>,
+        type_7081macc: type_7081macc {
+            compatible = "zmk,behavior-macro";
+            label = "TYPE_7081MACC";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LA(GRAVE)>,
+                <&macro_release>,
+                <&macro_pause 100 &kp N7 &macro_pause 10 &kp N0 &macro_pause 10 &kp N8 &macro_pause 10 &kp N1 &macro_pause 10 &kp M &macro_pause 10 &kp A &macro_pause 10 &kp C &macro_pause 10 &kp C>;
+        };
 
-            // --- 文字列入力 ---
-            <&kp N7>, <&macro_pause 10>,
-            <&kp N0>, <&macro_pause 10>,
-            <&kp N8>, <&macro_pause 10>,
-            <&kp N1>, <&macro_pause 10>,
-            <&kp M>, <&macro_pause 10>,
-            <&kp A>, <&macro_pause 10>,
-            <&kp C>, <&macro_pause 10>,
-            <&kp C>;
+        type_macc7081: type_macc7081 {
+            compatible = "zmk,behavior-macro";
+            label = "TYPE_MACC7081";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LA(GRAVE)>,
+                <&macro_release>,
+                <&macro_pause 100 &kp M &macro_pause 10 &kp A &macro_pause 10 &kp C &macro_pause 10 &kp C &macro_pause 10 &kp N7 &macro_pause 10 &kp N0 &macro_pause 10 &kp N8 &macro_pause 10 &kp N1>;
+        };
     };
-
-  type_macc7081: type_macc7081 {
-        compatible = "zmk,behavior-macro";
-        label = "TYPE_MACC7081";
-        #binding-cells = <0>;
-        bindings =
-            // --- IMEオフ（Alt + `） ---
-            <&macro_press>,
-            <&kp LA(GRAVE)>,
-            <&macro_release>,
-            <&macro_pause 100>,
-
-            // --- 文字列入力 ---
-            <&kp M>, <&macro_pause 10>,
-            <&kp A>, <&macro_pause 10>,
-            <&kp C>, <&macro_pause 10>,
-            <&kp C>, <&macro_pause 10>,
-            <&kp N7>, <&macro_pause 10>,
-            <&kp N0>, <&macro_pause 10>,
-            <&kp N8>, <&macro_pause 10>,
-            <&kp N1>;
-    };
-};
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
@@ -210,10 +168,10 @@
 
         MOUSE {
             bindings = <
-&to_layer_0 Q     &to_layer_0 W  &to_layer_0 E  &to_layer_0 R           &to_layer_0 T                          &kp LG(LS(S))  &kp LC(UP_ARROW)  &kp LG(D)      &kp LG(TAB)  &kp LS(LC(RIGHT))
-&to_layer_0 A     &to_layer_0 S  &to_layer_0 D  &to_layer_0 F           &to_layer_0 G  &kp C_MUTE      &to 3   &kp LC(LEFT)   &mkp MB1          &lt 5 LC(TAB)  &mkp MB2     &kp LS(LC(DOWN_ARROW))
-&mt LEFT_SHIFT Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V           &to_layer_0 B  &trans          &to 2   &kp F4         &mkp MB4          &kp LC(C)      &kp LC(V)    &kp LS(LC(V))
-&trans            &trans         &trans         &to_layer_0 LANGUAGE_2  &trans         &trans          &trans  &to 0                                                        &kp DELETE
+&to_layer_0 Q     &to_layer_0 W  &to_layer_0 E  &to_layer_0 R           &to_layer_0 T                                 &kp LG(LS(S))  &kp LC(UP_ARROW)  &kp LG(D)      &kp LG(TAB)  &kp LS(LC(RIGHT))
+&to_layer_0 A     &to_layer_0 S  &to_layer_0 D  &to_layer_0 F           &to_layer_0 G   &kp C_MUTE            &to 3   &kp LC(LEFT)   &mkp MB1          &lt 5 LC(TAB)  &mkp MB2     &kp LS(LC(DOWN_ARROW))
+&mt LEFT_SHIFT Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V           &to_layer_0 B   &type_name_yoshi      &to 2   &kp F4         &mkp MB4          &kp LC(C)      &kp LC(V)    &kp LS(LC(V))
+&trans            &trans         &trans         &to_layer_0 LANGUAGE_2  &type_7081macc  &type_macc7081        &trans  &to 0                                                        &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
