@@ -77,20 +77,13 @@
 
             label = "MKP_EXIT_AML";
         };
-YOSHITAKA_OKUHARA: yoshitaka_okuhara {
+
+        YOSHITAKA_OKUHARA: yoshitaka_okuhara {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            
-            bindings = <
-                &kp Y &kp O &kp S &kp H &kp I &kp T &kp A &kp K &kp A
-                
-                // アンダースコア '_' の入力
-                &kp UNDERSCORE
-                
-                &kp O &kp K &kp U &kp H &kp A &kp R &kp A
-            >;
+            bindings = <&kp Y &kp O &kp S &kp H &kp I &kp T &kp A &kp K &kp A &kp UNDERSCORE &kp O &kp K &kp U &kp H &kp A &kp R &kp A>;
         };
-};
+    };
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
@@ -101,8 +94,7 @@ YOSHITAKA_OKUHARA: yoshitaka_okuhara {
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
- 
-};
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -149,10 +141,10 @@ YOSHITAKA_OKUHARA: yoshitaka_okuhara {
 
         MOUSE {
             bindings = <
-&to_layer_0 Q     &to_layer_0 W  &to_layer_0 E  &to_layer_0 R           &to_layer_0 T                          &kp LG(LS(S))  &kp LC(UP_ARROW)  &kp LG(D)      &kp LG(TAB)  &kp LS(LC(RIGHT))
-&to_layer_0 A     &to_layer_0 S  &to_layer_0 D  &to_layer_0 F           &to_layer_0 G  &kp C_MUTE      &to 3   &kp LC(LEFT)   &mkp MB1          &lt 5 LC(TAB)  &mkp MB2     &kp LS(LC(DOWN_ARROW))
-&mt LEFT_SHIFT Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V           &to_layer_0 B  &trans          &to 2   &kp F4         &mkp MB4          &kp LC(C)      &kp LC(V)    &kp LS(LC(V))
-&trans            &trans         &trans         &to_layer_0 LANGUAGE_2  &trans         &trans          &trans  &to 0                                                        &kp DELETE
+&to_layer_0 Q     &to_layer_0 W  &to_layer_0 E  &to_layer_0 R           &to_layer_0 T                                  &kp LG(LS(S))  &kp LC(UP_ARROW)  &kp LG(D)      &kp LG(TAB)  &kp LS(LC(RIGHT))
+&to_layer_0 A     &to_layer_0 S  &to_layer_0 D  &to_layer_0 F           &to_layer_0 G  &kp C_MUTE              &to 3   &kp LC(LEFT)   &mkp MB1          &lt 5 LC(TAB)  &mkp MB2     &kp LS(LC(DOWN_ARROW))
+&mt LEFT_SHIFT Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V           &to_layer_0 B  &YOSHITAKA_OKUHARA      &to 2   &kp F4         &mkp MB4          &kp LC(C)      &kp LC(V)    &kp LS(LC(V))
+&trans            &trans         &trans         &to_layer_0 LANGUAGE_2  &trans         &trans                  &trans  &to 0                                                        &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
