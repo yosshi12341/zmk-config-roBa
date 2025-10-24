@@ -77,7 +77,20 @@
 
             label = "MKP_EXIT_AML";
         };
-    };
+YOSHITAKA_OKUHARA: yoshitaka_okuhara {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            
+            bindings = <
+                &kp Y &kp O &kp S &kp H &kp I &kp T &kp A &kp K &kp A
+                
+                // アンダーバー '_' の入力
+                &mod(LSFT, MINUS)
+                
+                &kp O &kp K &kp U &kp H &kp A &kp R &kp A
+            >;
+        };
+};
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
