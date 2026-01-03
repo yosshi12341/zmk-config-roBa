@@ -41,7 +41,7 @@
 
         muhennkann {
             bindings = <&to_layer_0 ESCAPE>;
-            key-positions = <11 10>;
+            key-positions = <0 1>;
         };
 
         double_quotation {
