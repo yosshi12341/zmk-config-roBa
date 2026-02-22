@@ -78,20 +78,18 @@
             label = "MKP_EXIT_AML";
         };
 
-mkp_exit_AMLnotime: mkp_exit_AMLnotime {
-    compatible = "zmk,behavior-macro-one-param";
-    #binding-cells = <1>;
-    
-    tap-ms = <10>; 
-    wait-ms = <10>;
+        mkp_exit_AMLnotime: mkp_exit_AMLnotime {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            tap-ms = <10>;
+            wait-ms = <10>;
+            bindings =
+                <&macro_tap>,
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER &to 0>;
+                                    // 2. 確実にレイヤー0へ移動
+            label = "MKP_EXIT_AMLnotime";
+        };
 
-    bindings =
-        <&macro_tap>,
-        <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>, // 1. 引数のマウスボタンをクリック
-        <&to 0>;                                    // 2. 確実にレイヤー0へ移動
-        
-    label = "MKP_EXIT_AMLnotime";
-};
         YOSHITAKA_OKUHARA: yoshitaka_okuhara {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -167,10 +165,10 @@ mkp_exit_AMLnotime: mkp_exit_AMLnotime {
 
         MOUSE {
             bindings = <
-&to_layer_0 Q     &to_layer_0 W  &to_layer_0 E  &to_layer_0 R           &to_layer_0 T                                    &kp LG(LS(S))  &kp LC(UP_ARROW)   &kp LG(D)      &kp LG(TAB)  &kp LS(LC(RIGHT))
-&to_layer_0 A     &to_layer_0 S  &to_layer_0 D  &to_layer_0 F           &to_layer_0 G    &kp C_MUTE              &to 3   &mkp MB1       &mkp_exit_AML MB1  &lt 5 LC(TAB)  &mkp MB2     &kp LS(LC(DOWN_ARROW))
-&mt LEFT_SHIFT Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V           &to_layer_0 B    &YOSHITAKA_OKUHARA      &to 2   &kp F4         &mkp MB4           &kp LC(C)      &kp LC(V)    &kp LS(LC(V))
-&trans            &trans         &trans         &to_layer_0 LANGUAGE_2  &MACRO_7081MACC  &MACRO_MACC7081         &trans  &to 0                                                         &kp DELETE
+&to_layer_0 Q     &to_layer_0 W  &to_layer_0 E  &to_layer_0 R           &to_layer_0 T                                    &kp LG(LS(S))            &kp LC(UP_ARROW)  &kp LG(D)      &kp LG(TAB)  &kp LS(LC(RIGHT))
+&to_layer_0 A     &to_layer_0 S  &to_layer_0 D  &to_layer_0 F           &to_layer_0 G    &kp C_MUTE              &to 3   &kp LC(LS(LEFT))         &mkp MB1          &lt 5 LC(TAB)  &mkp MB2     &kp LS(LC(DOWN_ARROW))
+&mt LEFT_SHIFT Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V           &to_layer_0 B    &YOSHITAKA_OKUHARA      &to 2   &kp F4                   &mkp MB4          &kp LC(C)      &kp LC(V)    &kp LS(LC(V))
+&trans            &trans         &trans         &to_layer_0 LANGUAGE_2  &MACRO_7081MACC  &MACRO_MACC7081         &trans  &mkp_exit_AMLnotime MB1                                                &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
