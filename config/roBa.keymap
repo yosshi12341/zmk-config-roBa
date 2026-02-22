@@ -78,6 +78,20 @@
             label = "MKP_EXIT_AML";
         };
 
+mkp_exit_AML: mkp_exit_AMLnotime {
+    compatible = "zmk,behavior-macro-one-param";
+    #binding-cells = <1>;
+    
+    tap-ms = <10>; 
+    wait-ms = <10>;
+
+    bindings =
+        <&macro_tap>,
+        <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>, // 1. 引数のマウスボタンをクリック
+        <&to 0>;                                    // 2. 確実にレイヤー0へ移動
+        
+    label = "MKP_EXIT_AMLnotime";
+};
         YOSHITAKA_OKUHARA: yoshitaka_okuhara {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
